@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sammy Productions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Sammy Productions</h1>
+        <p>Your gateway to exciting student films and quizzes!</p>
+    </header>
+
+    <!-- Search Bar -->
+    <section id="search">
+        <input type="text" id="movie-search" placeholder="Search for a movie..." oninput="filterMovies()">
+    </section>
+
+    <!-- Movie Covers Section -->
+    <section id="movies">
+        <h2>Our Movies</h2>
+        <div id="movie-grid">
+            <div class="movie-tile" data-movie="Slakteren">
+                <a href="slakteren.html">
+                    <img src="assets/images/slakteren_cover.jpg" alt="Slakteren">
+                </a>
+                <p>Slakteren</p>
+            </div>
+            <div class="movie-tile" data-movie="Presten">
+                <a href="presten.html">
+                    <img src="assets/images/presten_cover.jpg" alt="Presten">
+                </a>
+                <p>Presten</p>
+            </div>
+            <div class="movie-tile" data-movie="Det Usynlige Barnet & Pelle">
+                <a href="det_usynlige_barnet_pelle.html">
+                    <img src="assets/images/det_usynlige_barnet_pelle_cover.jpg" alt="Det Usynlige Barnet & Pelle">
+                </a>
+                <p>Det Usynlige Barnet & Pelle</p>
+            </div>
+            <div class="movie-tile" data-movie="Den 'Største' Forbrytelse">
+                <a href="den_storste_forbrytelse.html">
+                    <img src="assets/images/den_storste_forbrytelse_cover.jpg" alt="Den 'Største' Forbrytelse">
+                </a>
+                <p>Den "Største" Forbrytelse</p>
+            </div>
+            <div class="movie-tile" data-movie="Breaching Soldier">
+                <a href="breaching_soldier.html">
+                    <img src="assets/images/breaching_soldier_cover.jpg" alt="Breaching Soldier">
+                </a>
+                <p>Breaching Soldier</p>
+            </div>
+            <div class="movie-tile" data-movie="Besatt">
+                <a href="besatt.html">
+                    <img src="assets/images/besatt_cover.jpg" alt="Besatt">
+                </a>
+                <p>Besatt</p>
+            </div>
+            <div class="movie-tile" data-movie="Raven Steel">
+                <a href="raven_steel.html">
+                    <img src="assets/images/raven_steel_cover.jpg" alt="Raven Steel">
+                </a>
+                <p>Raven Steel</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bebbscars Section -->
+    <section id="bebbscars">
+        <h2>The Bebbscars</h2>
+        <a href="bebbscars.html">
+            <img src="assets/images/bebbscars_banner.jpg" alt="Bebbscars Banner" class="banner">
+        </a>
+        <p>Discover the most prestigious awards in student film production!</p>
+    </section>
+
+    <!-- Social Media Links -->
+    <footer>
+        <h3>Follow Us</h3>
+        <ul>
+            <li><a href="https://instagram.com">Instagram</a></li>
+            <li><a href="https://youtube.com">YouTube</a></li>
+            <li><a href="https://facebook.com">Facebook</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // Basic search functionality
+        function filterMovies() {
+            const searchValue = document.getElementById('movie-search').value.toLowerCase();
+            const movieTiles = document.querySelectorAll('.movie-tile');
+
+            movieTiles.forEach(tile => {
+                const movieName = tile.getAttribute('data-movie').toLowerCase();
+                if (movieName.includes(searchValue)) {
+                    tile.style.display = '';
+                } else {
+                    tile.style.display = 'none';
+                }
+            });
+
+            if (searchValue === '') {
+                movieTiles.forEach(tile => {
+                    tile.style.display = '';
+                });
+            }
+        }
+    </script>
+</body>
+</html>
