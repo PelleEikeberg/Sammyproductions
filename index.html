@@ -5,6 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sammy Productions</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Inline CSS for demonstration (use style.css in production) */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        #search {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #movie-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .movie-tile {
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .movie-tile img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .movie-tile a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        #bebbscars {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        #bebbscars img {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,49 +107,49 @@
 
     <!-- Movie Covers Section -->
     <section id="movies">
-        <h2>Our Movies</h2>
+        <h2 style="text-align: center;">Our Movies</h2>
         <div id="movie-grid">
             <div class="movie-tile" data-movie="Slakteren">
                 <a href="slakteren.html">
-                    <img src="assets/images/slakteren_cover.jpg" alt="Slakteren">
+                    <img src="./assets/images/slakteren_cover.jpg" alt="Slakteren">
+                    <div class="caption">Slakteren</div>
                 </a>
-                <p>Slakteren</p>
             </div>
             <div class="movie-tile" data-movie="Presten">
                 <a href="presten.html">
-                    <img src="assets/images/presten_cover.jpg" alt="Presten">
+                    <img src="./assets/images/presten_cover.jpg" alt="Presten">
+                    <div class="caption">Presten</div>
                 </a>
-                <p>Presten</p>
             </div>
             <div class="movie-tile" data-movie="Det Usynlige Barnet & Pelle">
                 <a href="det_usynlige_barnet_pelle.html">
-                    <img src="assets/images/det_usynlige_barnet_pelle_cover.jpg" alt="Det Usynlige Barnet & Pelle">
+                    <img src="./assets/images/det_usynlige_barnet_pelle_cover.jpg" alt="Det Usynlige Barnet & Pelle">
+                    <div class="caption">Det Usynlige Barnet & Pelle</div>
                 </a>
-                <p>Det Usynlige Barnet & Pelle</p>
             </div>
             <div class="movie-tile" data-movie="Den 'Største' Forbrytelse">
                 <a href="den_storste_forbrytelse.html">
-                    <img src="assets/images/den_storste_forbrytelse_cover.jpg" alt="Den 'Største' Forbrytelse">
+                    <img src="./assets/images/den_storste_forbrytelse_cover.jpg" alt="Den 'Største' Forbrytelse">
+                    <div class="caption">Den "Største" Forbrytelse</div>
                 </a>
-                <p>Den "Største" Forbrytelse</p>
             </div>
             <div class="movie-tile" data-movie="Breaching Soldier">
                 <a href="breaching_soldier.html">
-                    <img src="assets/images/breaching_soldier_cover.jpg" alt="Breaching Soldier">
+                    <img src="./assets/images/breaching_soldier_cover.jpg" alt="Breaching Soldier">
+                    <div class="caption">Breaching Soldier</div>
                 </a>
-                <p>Breaching Soldier</p>
             </div>
             <div class="movie-tile" data-movie="Besatt">
                 <a href="besatt.html">
-                    <img src="assets/images/besatt_cover.jpg" alt="Besatt">
+                    <img src="./assets/images/besatt_cover.jpg" alt="Besatt">
+                    <div class="caption">Besatt</div>
                 </a>
-                <p>Besatt</p>
             </div>
             <div class="movie-tile" data-movie="Raven Steel">
                 <a href="raven_steel.html">
-                    <img src="assets/images/raven_steel_cover.jpg" alt="Raven Steel">
+                    <img src="./assets/images/raven_steel_cover.jpg" alt="Raven Steel">
+                    <div class="caption">Raven Steel</div>
                 </a>
-                <p>Raven Steel</p>
             </div>
         </div>
     </section>
