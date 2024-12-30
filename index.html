@@ -5,14 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sammy Productions</title>
     <link rel="stylesheet" href="./style.css">
+    <script defer src="./theme-toggle.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Sammy Productions</h1>
-        <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">🌙</button>
-        <p>Your gateway to exciting student films and quizzes!</p>
-    </header>
-
     <!-- Search Bar -->
     <section id="search">
         <input type="text" id="movie-search" placeholder="Search for a movie..." oninput="filterMovies()">
@@ -25,43 +20,43 @@
             <div id="movie-grid">
                 <div class="movie-tile" data-movie="Slakteren">
                     <a href="slakteren.html">
-                        <img src="./assets/images/slakteren_cover.jpg" alt="Slakteren">
+                        <img src="./assets/slakteren_cover.jpg" alt="Slakteren">
                         <div class="caption">Slakteren</div>
                     </a>
                 </div>
                 <div class="movie-tile" data-movie="Presten">
                     <a href="presten.html">
-                        <img src="./assets/images/presten_cover.jpg" alt="Presten">
+                        <img src="./assets/presten_cover.jpg" alt="Presten">
                         <div class="caption">Presten</div>
                     </a>
                 </div>
                 <div class="movie-tile" data-movie="Det Usynlige Barnet & Pelle">
                     <a href="det_usynlige_barnet_pelle.html">
-                        <img src="./assets/images/det_usynlige_barnet_pelle_cover.jpg" alt="Det Usynlige Barnet & Pelle">
+                        <img src="./assets/det_usynlige_barnet_pelle_cover.jpg" alt="Det Usynlige Barnet & Pelle">
                         <div class="caption">Det Usynlige Barnet & Pelle</div>
                     </a>
                 </div>
                 <div class="movie-tile" data-movie="Den 'Største' Forbrytelse">
                     <a href="den_storste_forbrytelse.html">
-                        <img src="./assets/images/den_storste_forbrytelse_cover.jpg" alt="Den 'Største' Forbrytelse">
+                        <img src="./assets/den_storste_forbrytelse_cover.jpg" alt="Den 'Største' Forbrytelse">
                         <div class="caption">Den "Største" Forbrytelse</div>
                     </a>
                 </div>
                 <div class="movie-tile" data-movie="Breaching Soldier">
                     <a href="breaching_soldier.html">
-                        <img src="./assets/images/breaching_soldier_cover.png" alt="Breaching Soldier">
+                        <img src="./assets/breaching_soldier_cover.png" alt="Breaching Soldier">
                         <div class="caption">Breaching Soldier</div>
                     </a>
                 </div>
                 <div class="movie-tile" data-movie="Besatt">
                     <a href="besatt.html">
-                        <img src="./assets/images/besatt_cover.jpg" alt="Besatt">
+                        <img src="./assets/besatt_cover.jpg" alt="Besatt">
                         <div class="caption">Besatt</div>
                     </a>
                 </div>
                 <div class="movie-tile" data-movie="Raven Steel">
                     <a href="raven_steel.html">
-                        <img src="./assets/images/raven_steel_cover.jpg" alt="Raven Steel">
+                        <img src="./assets/raven_steel_cover.jpg" alt="Raven Steel">
                         <div class="caption">Raven Steel</div>
                     </a>
                 </div>
@@ -73,7 +68,7 @@
     <section id="bebbscars">
         <h2>The Bebbscars</h2>
         <a href="bebbscars.html">
-            <img src="./assets/images/bebbscars_banner.jpg" alt="Bebbscars Banner" class="banner">
+            <img src="./assets/bebbscars_banner.jpg" alt="Bebbscars Banner" class="banner">
         </a>
         <p>Discover the most prestigious awards in student film production!</p>
     </section>
@@ -109,31 +104,6 @@
                 });
             }
         }
-
-        // JavaScript for toggling themes
-        const themeToggle = document.getElementById('theme-toggle');
-
-        themeToggle.addEventListener('click', () => {
-            const isDarkMode = document.documentElement.style.getPropertyValue('--background-color') === '#2b2b2b';
-
-            if (isDarkMode) {
-                // Switch to Light Mode
-                document.documentElement.style.setProperty('--background-color', '#ffffff');
-                document.documentElement.style.setProperty('--text-color', '#000000');
-                document.documentElement.style.setProperty('--header-background-color', '#ffeb99'); /* Light yellow */
-                document.documentElement.style.setProperty('--highlight-color', '#ffcc00');
-                themeToggle.textContent = '🌙'; // Update to moon icon for dark mode
-                themeToggle.setAttribute('aria-label', 'Switch to Dark Mode');
-            } else {
-                // Switch to Dark Mode
-                document.documentElement.style.setProperty('--background-color', '#2b2b2b');
-                document.documentElement.style.setProperty('--text-color', '#ffffff');
-                document.documentElement.style.setProperty('--header-background-color', '#d8a909');
-                document.documentElement.style.setProperty('--highlight-color', '#d8a909');
-                themeToggle.textContent = '☀️'; // Update to sun icon for light mode
-                themeToggle.setAttribute('aria-label', 'Switch to Light Mode');
-            }
-        });
     </script>
 </body>
 </html>

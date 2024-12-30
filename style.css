@@ -12,6 +12,7 @@ body {
 }
 
 header {
+    padding: 1px;
     background-color: var(--header-background-color);
 }
 
@@ -165,7 +166,7 @@ footer a {
 
 #theme-toggle {
     position: absolute;
-    top: 10px;
+    top: 15px; /* Adjusted from 10px to 15px to move it down */
     right: 20px;
     background: none;
     border: none;
