@@ -48,7 +48,7 @@ document.body.insertAdjacentHTML(
     'afterbegin',
     `
     <header>
-        <img src="./assets/banner.png" alt="Sammy Productions" style="display: block; margin: 0 auto;">
+        <img src="../assets/banner.png" alt="Sammy Productions" style="display: block; margin: 0 auto;">
         <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">🌙</button>
     </header>
     `
